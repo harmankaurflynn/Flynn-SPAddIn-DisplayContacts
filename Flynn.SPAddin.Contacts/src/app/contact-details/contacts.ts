@@ -10,6 +10,4 @@
     region: string;
     photo: string;
 
-
-
 }
