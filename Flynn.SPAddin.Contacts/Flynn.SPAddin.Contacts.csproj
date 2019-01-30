@@ -45,6 +45,7 @@
     <Content Include="app\Elements.xml" />
     <Content Include="app\ContactDetails.aspx" />
     <Content Include="app\images\greenBackGrad.jpg" />
+    <Content Include="app\images\Loading.gif" />
     <Content Include="app\src\main.js" />
     <Content Include="app\src\polyfills.js" />
     <Content Include="app\src\runtime.js" />

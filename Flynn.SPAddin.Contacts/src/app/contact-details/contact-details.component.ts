@@ -42,6 +42,7 @@ export class ContactDetailsComponent implements OnInit {
     public previousHeight: number = 0; // the height
     minHeight: number = 0;     // the minimal allowed height
     firstResize: boolean = true;
+    loaderShow: boolean = false;
     constructor(private http: Http) {
         
         
@@ -50,7 +51,8 @@ export class ContactDetailsComponent implements OnInit {
     ngOnInit() {
        
         let contactsList = this.GetData();
-        contactsList.then((success)=> {
+        contactsList.then((success) => {
+            this.loaderShow = false;
             let element: HTMLElement = document.getElementById('defaultOpen') as HTMLElement;
             element.click();
 
@@ -58,8 +60,8 @@ export class ContactDetailsComponent implements OnInit {
             let heoght = document.getElementById('contactdetailstabs').clientHeight;
             this.resizeWindow();
             console.log("**height"+heoght)
-        }, (error)=> {
-           
+        }, (error) => {
+            this.loaderShow = false;
            this.errorMessage = error ;
             })
         
@@ -72,6 +74,7 @@ export class ContactDetailsComponent implements OnInit {
         let promise = new Promise((resolve, reject) => {
             let listname = decodeURIComponent(this.getQueryStringParameter("ListName"));
             if (listname && listname != undefined && listname != "undefined") {
+                this.loaderShow = true;
                 this.getSharePointListData("/web/lists/getbytitle('" + listname+"')/items?$orderby = Title", true).subscribe(response => {
                     var picture: string;
                     this.contacts = [];

@@ -12,5 +12,6 @@
     <ProjectItemFile Source="ContactDetails.aspx" Target="app\" Type="ElementFile" />
     <ProjectItemFile Source="ViewDepartmentContactsList.aspx" Target="app\" Type="ElementFile" />
     <ProjectItemFile Source="images\greenBackGrad.jpg" Target="app\images\" Type="ElementFile" />
+    <ProjectItemFile Source="images\Loading.gif" Target="app\images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

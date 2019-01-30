@@ -56,6 +56,10 @@
   </div>
   <div class="contactdetailstabs" id="contactdetailstabs">
     
+    <div [class.loader-hidden]="!loaderShow">
+     
+      <img src="../app/images/Loading.gif" />"
+    </div>
     <ul class="tab">
       <li>
         <button class="tablinks active" id="defaultOpen" (click)="openTab($event, 'Canada')">Canada</button>

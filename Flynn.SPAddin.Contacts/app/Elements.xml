@@ -11,5 +11,6 @@
     <File Path="app\ContactDetails.aspx" Url="app/ContactDetails.aspx" ReplaceContent="TRUE" />
     <File Path="app\ViewDepartmentContactsList.aspx" Url="app/ViewDepartmentContactsList.aspx" ReplaceContent="TRUE" />
     <File Path="app\images\greenBackGrad.jpg" Url="app/images/greenBackGrad.jpg" ReplaceContent="TRUE" />
+    <File Path="app\images\Loading.gif" Url="app/images/Loading.gif" ReplaceContent="TRUE" />
   </Module>
 </Elements>

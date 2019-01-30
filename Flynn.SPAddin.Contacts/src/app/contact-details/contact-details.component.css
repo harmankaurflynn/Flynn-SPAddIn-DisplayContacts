@@ -333,3 +333,8 @@ pre.prettyprint {
 #right {
   width: 40%;
 }
+
+/*--loader*/
+.loader-hidden {
+  display:none;
+}
