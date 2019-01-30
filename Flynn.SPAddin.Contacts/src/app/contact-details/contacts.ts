@@ -9,7 +9,7 @@
     country: string;
     region: string;
     photo: string;
-    
+
 
 
 }
