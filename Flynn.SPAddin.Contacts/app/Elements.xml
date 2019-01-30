@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="app">
+    <File Path="app\css\App.css" Url="app/css/App.css" ReplaceContent="TRUE" />
+    <File Path="app\Default.aspx" Url="app/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="app\src\main.js" Url="app/src/main.js" ReplaceContent="TRUE" />
+    <File Path="app\src\polyfills.js" Url="app/src/polyfills.js" ReplaceContent="TRUE" />
+    <File Path="app\src\styles.js" Url="app/src/styles.js" ReplaceContent="TRUE" />
+    <File Path="app\src\vendor.js" Url="app/src/vendor.js" ReplaceContent="TRUE" />
+    <File Path="app\src\runtime.js" Url="app/src/runtime.js" ReplaceContent="TRUE" />
+    <File Path="app\ContactDetails.aspx" Url="app/ContactDetails.aspx" ReplaceContent="TRUE" />
+    <File Path="app\ViewDepartmentContactsList.aspx" Url="app/ViewDepartmentContactsList.aspx" ReplaceContent="TRUE" />
+    <File Path="app\images\greenBackGrad.jpg" Url="app/images/greenBackGrad.jpg" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

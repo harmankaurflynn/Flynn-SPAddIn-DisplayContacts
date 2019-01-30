@@ -1,0 +1,24 @@
+﻿[
+
+  {
+    "tabTitle": "Tab 1",
+    "content": "Tab 1 Content"
+  },
+  {
+    "tabTitle": "Tab 2",
+    "content": "Tab 2 Content"
+  },
+  {
+    "tabTitle": "Tab 3",
+    "content": "Tab 3 Content"
+  },
+  {
+    "tabTitle": "Tab 4",
+    "content": "Tab 4 Content"
+  },
+  {
+    "tabTitle": "Tab 5",
+    "content": "Tab 5 Content"
+  }
+
+]

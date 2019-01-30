@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ClientWebPart Name="ViewDepartmentContactsList" Title="View Department ContactsList" Description="ViewDepartmentContactsList Description">
+
+    <!-- Content element identifies the location of the page that will render inside the client web part
+         Properties are referenced on the query string using the pattern _propertyName_
+         Example: Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
+    <Content Type="html" Src="~appWebUrl/app/ViewDepartmentContactsList.aspx?{StandardTokens}&amp;ListName=_ListName_" />
+
+    <!-- Define properties in the Properties element.
+         Remember to put Property Name on the Src attribute of the Content element above. -->
+    <Properties>
+      <Property Name="ListName" Type="string" WebBrowsable="true" WebDisplayName="List Name" WebDescription="Name of list which will be used to display data" WebCategory="Custom Properties" DefaultValue="" RequiresDesignerPermission="true" />
+    </Properties>
+
+  </ClientWebPart>
+</Elements>

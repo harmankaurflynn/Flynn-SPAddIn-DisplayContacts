@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
+    <ProjectItemFile Source="src\browserslist" Target="src\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\contact-details\contact-details.component.css" Target="src\app\contact-details\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\contact-details\contact-details.component.html" Target="src\app\contact-details\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\contact-details\contact-details.component.spec.ts" Target="src\app\contact-details\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\contact-details\contact-details.component.ts" Target="src\app\contact-details\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\contact-details\contacts.ts" Target="src\app\contact-details\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

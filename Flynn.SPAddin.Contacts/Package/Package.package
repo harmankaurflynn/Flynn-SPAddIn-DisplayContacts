@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="324d321d-6a73-4071-84de-fa5a4bd71dec" 
+        solutionId="324d321d-6a73-4071-84de-fa5a4bd71dec" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Flynn.SPAddin.Contacts"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="1edc97f0-55c6-4f6f-95ee-edf0b3aec223" />
+  </features>
+</package>

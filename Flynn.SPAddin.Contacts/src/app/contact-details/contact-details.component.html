@@ -1,0 +1,129 @@
+﻿
+
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+  
+  <div style="margin: 0px 35px auto;" *ngIf="contactsDirectors">
+    <div style="padding:20px;font-size:22px;">
+
+      <b> Safety Director</b>
+    </div>
+    <div class="container" *ngFor="let contact of contactsDirectors" style="width:320px; height:400px !important;margin-left:50px; display:inline-block;">
+
+      <div class="row" style="margin-left:200px; margin-bottom:5px;">
+        <div>
+
+          <div class="col-md-12">
+            <div class="col-md-4 col-sm-4">
+              <div class="card-container" style="width:320px">
+                <div class="card">
+                  <div class="front" style="height:370px !important;">
+
+                    <div class="cover">
+                      <img src="../app/images/greenBackGrad.jpg" />
+                     
+                    </div>
+                    <div class="user">
+                      <img class="img-circle" [src]="contact.photo">
+                    </div>
+                    <div class="content">
+                      <div class="main">
+                        <h3 class="name"><div><span style="color:#003300">{{contact.name}}</span></div></h3>
+                        <p class="profession"><span style="color:#003300">{{contact.jobTitle}} , {{contact.country}}</span></p>
+                        <h5><i class="fa fa-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.businessPhoneNo}}</span></h5>
+                        <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.mobilePhone}}</span></h5>
+                        <h5><i class="fa fa-envelope" style="padding-right:3px"></i><span style="color:#003300">{{contact.emailID}}</span></h5>
+
+                      </div>
+
+
+                    </div>
+                  </div> <!-- end front panel-->
+                </div> <!-- end back panel -->
+              </div> <!-- end card -->
+            </div> <!-- end card-container -->
+          </div> <!-- end col sm 4 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div style="margin: 0px 35px auto;" >
+  <div style="padding:20px;font-size:22px;">
+
+    <b> Safety Contacts</b>
+  </div>
+  <div class="contactdetailstabs" id="contactdetailstabs">
+    
+    <ul class="tab">
+      <li>
+        <button class="tablinks active" id="defaultOpen" (click)="openTab($event, 'Canada')">Canada</button>
+      </li>
+      <li>
+        <button class="tablinks" (click)="openTab($event, 'US')">US</button>
+      </li>
+    </ul>
+    <div class="tabcontent" id="canada" style="padding-left: 20px; display: block;">
+
+
+      <div class="region" *ngFor="let region of contactsDistinctRegions; let i=index">
+
+        <div style="padding:20px;font-size:18px;">
+
+          <b> {{region}}</b>
+        </div>
+        <div>
+
+          <div class="container" *ngFor="let contact of contactsForRegion | matchesRegion : region" style="width:320px; height:400px !important;margin-left:50px; display:inline-block;">
+
+            <div class="row" style="margin-left:200px; margin-bottom:5px;">
+              <div>
+
+                <div class="col-md-12">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="card-container" style="width:320px">
+                      <div class="card">
+                        <div class="front" style="height:370px !important;">
+
+                          <div class="cover">
+                            <img src="../app/images/greenBackGrad.jpg" />
+                          </div>
+                          <div class="user">
+                            <img class="img-circle" [src]="contact.photo">
+                          </div>
+                          <div class="content">
+                            <div class="main">
+                              <h3 class="name"><div><span style="color:#003300">{{contact.name}}</span></div></h3>
+                              <p class="profession"><span style="color:#003300">{{contact.jobTitle}} , {{contact.city}}</span></p>
+                              <h5><i class="fa fa-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.businessPhoneNo}}</span></h5>
+                              <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.mobilePhone}}</span></h5>
+                              <h5><i class="fa fa-envelope" style="padding-right:3px"></i><span style="color:#003300">{{contact.emailID}}</span></h5>
+
+                            </div>
+
+
+                          </div>
+                        </div> <!-- end front panel-->
+                      </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                  </div> <!-- end card-container -->
+                </div> <!-- end col sm 4 -->
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> <!-- end card -->
+    <!--</div>--> <!-- end div -->
+  </div>
+</div>
+
+<div class='form-text error' *ngIf="errorMessage">
+ {{errorMessage}}
+</div>
+
+       

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="src\browserslist" Url="src/browserslist" ReplaceContent="TRUE" />
+    <File Path="src\app\contact-details\contact-details.component.css" Url="src/app/contact-details/contact-details.component.css" ReplaceContent="TRUE" />
+    <File Path="src\app\contact-details\contact-details.component.html" Url="src/app/contact-details/contact-details.component.html" ReplaceContent="TRUE" />
+    <File Path="src\app\contact-details\contact-details.component.spec.ts" Url="src/app/contact-details/contact-details.component.spec.ts" ReplaceContent="TRUE" />
+    <File Path="src\app\contact-details\contact-details.component.ts" Url="src/app/contact-details/contact-details.component.ts" ReplaceContent="TRUE" />
+    <File Path="src\app\contact-details\contacts.ts" Url="src/app/contact-details/contacts.ts" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
