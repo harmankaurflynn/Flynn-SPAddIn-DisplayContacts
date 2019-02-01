@@ -50,16 +50,17 @@ export class ContactDetailsComponent implements OnInit {
 
     ngOnInit() {
        
-        let contactsList = this.GetData();
+        let contactsList = this.getData();
         contactsList.then((success) => {
             this.loaderShow = false;
-            let element: HTMLElement = document.getElementById('defaultOpen') as HTMLElement;
-            element.click();
+            this.contactsCountry = "Canada";
+
+            this.getContactsforSelectedCountry();
 
             console.log("success");
-            let heoght = document.getElementById('contactdetailstabs').clientHeight;
+            
             this.resizeWindow();
-            console.log("**height"+heoght)
+          
         }, (error) => {
             this.loaderShow = false;
            this.errorMessage = error ;
@@ -70,7 +71,7 @@ export class ContactDetailsComponent implements OnInit {
    
 
 
-    GetData(): Promise<any> {
+    getData(): Promise<any> {
         let promise = new Promise((resolve, reject) => {
             let listname = decodeURIComponent(this.getQueryStringParameter("ListName"));
             if (listname && listname != undefined && listname != "undefined") {
@@ -85,7 +86,7 @@ export class ContactDetailsComponent implements OnInit {
 
                             this.contacts.push({
                                 name: content.Title, emailID: content.Email, jobTitle: content.JobTitle, country: content.Country, businessPhoneNo: content.WorkPhone,
-                                mobilePhone: content.HomePhone, region: content.Region, photo: content.Photo, city: content.WorkCity
+                                mobilePhone: content.CellPhone, region: content.Region, photo: content.Photo, city: content.WorkCity
                             }); // or self.messages.push(m) - if you used self
                             console.log("entry")
 
@@ -94,7 +95,7 @@ export class ContactDetailsComponent implements OnInit {
 
                     }
                     console.log("Contacts" + this.contacts.length);
-                    document.getElementById('defaultOpen').click;
+                   // document.getElementById('defaultOpen').click;
                     resolve(this.contacts);
 
                 });
@@ -199,7 +200,7 @@ export class ContactDetailsComponent implements OnInit {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     //document.getElementById(tabName).style.display = "block";
-    if (evt.currentTarget != undefined)
+    if (evt!=undefined && event.currentTarget != undefined)
         evt.currentTarget.className += " active";
     else
         tablinks[0].className += " active";

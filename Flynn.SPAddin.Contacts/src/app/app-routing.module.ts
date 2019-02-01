@@ -19,12 +19,12 @@ const routes: Routes = [
         //]
     },
     
-    {
-        path: 'sharedservices/safety/FlynnSPAddinContacts/app/files', component: AppComponent
-    },
-    {
-        path: 'sharedservices/safety/FlynnSPAddinContacts/app/', component: ContactDetailsComponent
-    },
+    //{
+    //    path: 'sharedservices/safety/FlynnSPAddinContacts/app/files', component: AppComponent
+    //},
+    //{
+    //    path: 'sharedservices/safety/FlynnSPAddinContacts/app/', component: ContactDetailsComponent
+    //},
     {
         path: 'files', component: AppComponent
     },

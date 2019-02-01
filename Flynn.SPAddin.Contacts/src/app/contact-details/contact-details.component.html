@@ -32,8 +32,8 @@
                       <div class="main">
                         <h3 class="name"><div><span style="color:#003300">{{contact.name}}</span></div></h3>
                         <p class="profession"><span style="color:#003300">{{contact.jobTitle}} , {{contact.country}}</span></p>
-                        <h5><i class="fa fa-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.businessPhoneNo}}</span></h5>
-                        <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.mobilePhone}}</span></h5>
+                        <h5><i class="fa fa-phone" style="padding-right:3px"></i><a style="color:#003300">{{contact.businessPhoneNo}}</a></h5>
+                        <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><a style="color:#003300">{{contact.mobilePhone}}</a></h5>
                         <h5><i class="fa fa-envelope" style="padding-right:3px"></i><span style="color:#003300">{{contact.emailID}}</span></h5>
 
                       </div>
@@ -49,17 +49,19 @@
     </div>
   </div>
 
-<div style="margin: 0px 35px auto;" >
+<div [class.loader-hidden]="!loaderShow">
+
+  <img src="../app/images/Loading.gif" />"
+</div>
+
+<div style="margin: 0px 35px auto;" *ngIf="contacts" >
   <div style="padding:20px;font-size:22px;">
 
     <b> Safety Contacts</b>
   </div>
   <div class="contactdetailstabs" id="contactdetailstabs">
     
-    <div [class.loader-hidden]="!loaderShow">
-     
-      <img src="../app/images/Loading.gif" />"
-    </div>
+  
     <ul class="tab">
       <li>
         <button class="tablinks active" id="defaultOpen" (click)="openTab($event, 'Canada')">Canada</button>
@@ -98,11 +100,11 @@
                           </div>
                           <div class="content">
                             <div class="main">
-                              <h3 class="name"><div><span style="color:#003300">{{contact.name}}</span></div></h3>
-                              <p class="profession"><span style="color:#003300">{{contact.jobTitle}} , {{contact.city}}</span></p>
-                              <h5><i class="fa fa-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.businessPhoneNo}}</span></h5>
-                              <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><span style="color:#003300">{{contact.mobilePhone}}</span></h5>
-                              <h5><i class="fa fa-envelope" style="padding-right:3px"></i><span style="color:#003300">{{contact.emailID}}</span></h5>
+                              <h3 class="name"><div><a style="color:#003300">{{contact.name}}</a></div></h3>
+                              <p class="profession"><a style="color:#003300">{{contact.jobTitle}} , {{contact.city}}</a></p>
+                              <h5><i class="fa fa-phone" style="padding-right:3px"></i><a style="color:#003300">{{contact.businessPhoneNo}}</a></h5>
+                              <h5><i class="fa fa-mobile-phone" style="padding-right:3px"></i><a style="color:#003300">{{contact.mobilePhone}}</a></h5>
+                              <h5><i class="fa fa-envelope" style="padding-right:3px"></i><a style="color:#003300">{{contact.emailID}}</a></h5>
 
                             </div>
 
