@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 const routes: Routes = [
+    {
+        path: 'files', component: AppComponent
+    },
     
     {
         path: '', component: AppComponent
@@ -25,9 +28,7 @@ const routes: Routes = [
     //{
     //    path: 'sharedservices/safety/FlynnSPAddinContacts/app/', component: ContactDetailsComponent
     //},
-    {
-        path: 'files', component: AppComponent
-    },
+   
     { path: '**', component: ContactDetailsComponent }
 
 
